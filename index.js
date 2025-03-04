@@ -92,3 +92,8 @@ const characters = [
 	"/", 
 ]
 
+let uppercaseEl = document.getElementById("uppercase-el")
+let lowercaseEl = document.getElementById("lowercase-el")
+let numbersEl = document.getElementById("numbers-el")
+let charactersEl = document.getElementById("characters-el")
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Random Password Generator</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./index.css" />
+
+		<link
+			rel="icon"
+			type="image/svg+xml"
+			href="/public/noun-password-7544272.svg"
+		/>
+	</head>
+	<body>
+		<div class="border-box" id="container">
+			<div class="header">
+				<h1>
+					Generate a
+					<br />
+					<span> random password </span>
+				</h1>
+				<p>Never use an insecure password again</p>
+			</div>
+			<div id="settings">
+				<div class="border-box" id="setting-pw-length">
+					<h2>Password length:</h2>
+					<div id="pw-length-btns">
+						<input
+							id="p-pw-length-slider"
+							class="slider"
+							type="range"
+							min="8"
+							max="30"
+							value=""
+						/>
+						<p id="p-pw-length">
+							<output id="pw-length-slider-value"></output>
+						</p>
+					</div>
+				</div>
+				<div class="border-box" id="select-boxes">
+					<h2>Include:</h2>
+					<div id="select-boxes-input">
+						<label for="uppercase">
+							<input id="uppercase-el" type="checkbox" />Uppercase
+						</label>
+						<label for="lowercase">
+							<input id="lowercase-el" type="checkbox" /> Lowercase</label
+						>
+						<label for="numbers">
+							<input id="numbers-el" type="checkbox" /> Numbers</label
+						>
+						<label for="characters">
+							<input id="characters-el" type="checkbox" /> Characters</label
+						>
+					</div>
+				</div>
+			</div>
+			<div class="border-box" id="generate-pw">
+				<button id="generate-pw-btn" onclick="generatePasswords">
+					Generate Passwords
+				</button>
+			</div>
+			<div class="border-box" id="passwords">
+				<button id="pw-one-btn" onclick="copyPassword"></button>
+				<button id="pw-two-btn" onclick="copyPassword"></button>
+			</div>
+		</div>
+
+		<script src="./index.js"></script>
+	</body>
+</html>
