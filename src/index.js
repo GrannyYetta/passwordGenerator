@@ -98,6 +98,18 @@ let charactersEl = document.getElementById("characters-el");
 const value = document.querySelector("#pw-length-slider-value");
 const input = document.querySelector("#p-pw-length-slider");
 
+const passwordGeneratorBtn = document
+	.getElementById("generate-pw-btn")
+	.addEventListener("click", generatePasswords);
+
+const passwordOneBtn = document
+	.getElementById("pw-one-btn")
+	.addEventListener("click", (e) => copyPassword(e));
+
+const passwordTwoBtn = document
+	.getElementById("pw-two-btn")
+	.addEventListener("click", (e) => copyPassword(e));
+
 input.textContent = input.value;
 input.addEventListener("input", (e) => {
 	value.textContent = e.target.value;
@@ -130,14 +142,12 @@ function randomIndex() {
 	return result[randomNum];
 }
 
-console.log(randomIndex());
-
 function generatePasswords() {
 	let generatePasswordOneEl = document.getElementById("pw-one-btn");
 	let generatePasswordTwoEl = document.getElementById("pw-two-btn");
 
-	generatePasswordOneEl.textContent = ""
-	generatePasswordTwoEl.textContent = ""
+	generatePasswordOneEl.textContent = "";
+	generatePasswordTwoEl.textContent = "";
 
 	if (
 		uppercaseEl.checked ||
@@ -155,8 +165,29 @@ function generatePasswords() {
 		generatePasswordTwoEl.textContent =
 			"Please make sure to check at least one box";
 	}
-
-	
 }
 
-console.log(generatePasswords());
+async function copyPassword(event, feedbackDuration = 1000) {
+	if (!navigator.clipboard) {
+		console.error("Clipboard API not supported");
+		return;
+	}
+
+	const passwordBtn = event.target;
+	const originalText = passwordBtn.textContent;
+
+	try {
+		await navigator.clipboard.writeText(passwordBtn.textContent);
+		passwordBtn.textContent = "Copied!";
+		passwordBtn.classList.add("copied");
+		passwordBtn.setAttribute("aria-label", "Copied to clipboard");
+
+		setTimeout(() => {
+			passwordBtn.removeAttribute("aria-label");
+			passwordBtn.classList.remove("copied");
+			passwordBtn.textContent = originalText;
+		}, feedbackDuration);
+	} catch (err) {
+		console.error("Failed to copy", err);
+	}
+}
