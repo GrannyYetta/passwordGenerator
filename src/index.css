@@ -1,0 +1,294 @@
+.karla {
+	font-family: "Karla", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 800;
+	font-style: normal;
+}
+
+.inter {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	margins: 0;
+	background-color: #1c1c1c;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#container {
+	width: 34.37rem;
+	display: flex;
+	flex-direction: column;
+	background-color: #1f2937;
+	padding: 3em;
+	border-radius: 2em;
+}
+
+#settings {
+	padding: 1em 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+#setting-pw-length {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 3em;
+}
+
+#pw-length-btns {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: 1em;
+}
+
+#select-boxes {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+	align-items: center;
+	gap: 3rem;
+}
+
+#select-boxes-input {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-left: -2em;
+}
+
+#select-boxes-input label {
+	margin-right: 0.5em;
+}
+
+#uppercase-el,
+#lowercase-el,
+#numbers-el,
+#characters-el {
+	appearance: none;
+	width: 1.2em;
+	height: 1.2em;
+	border: 2px solid #9ca3af;
+	border-radius: 0.3em;
+	margin-right: 0.5em;
+	cursor: pointer;
+	position: relative;
+	background-color: #1f2937;
+	transition: background-color 0.3s, border-color 0.3s;
+}
+
+#uppercase-el:checked,
+#lowercase-el:checked,
+#numbers-el:checked,
+#characters-el:checked {
+	background-color: #6d28d9;
+	border-color: #6d28d9;
+}
+
+#uppercase-el:checked::after,
+#lowercase-el:checked::after,
+#numbers-el:checked::after,
+#characters-el:checked::after {
+	content: "\2713";
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 0.8em;
+}
+
+#uppercase-el:hover,
+#lowercase-el:hover,
+#numbers-el:hover,
+#characters-el:hover {
+	background-color: #4c1d95;
+	border-color: #4c1d95;
+}
+
+#select-boxes label {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	margin-left: 0;
+}
+
+#generate-pw {
+	display: flex;
+	justify-content: flex-start;
+	padding: 0.5em;
+	border-bottom: #2f3e53 solid 0.125em;
+}
+
+#passwords {
+	display: flex;
+	display-direction: rowm;
+	justify-content: flex-start;
+	text-wrap: wrap;
+	margin: 1.5em;
+	gap: 2rem;
+	color: #273549;
+	align-items: strech;
+}
+
+.header {
+	margin-left: 0;
+}
+
+h1 {
+	font-family: "Karla";
+	font-weight: 800;
+	font-size: 40;
+	letter-spacing: -2.5%;
+	color: white;
+	margin: 0.5rem;
+	margin-left: 0;
+}
+
+h2 {
+	font-family: "Inter";
+	fong-weight: 500;
+	font-style: bold;
+	font-size: 14;
+	color: #9ca3af;
+	margin-right: 0;
+	padding-right: 0;
+}
+
+span {
+	color: #6d28d9;
+}
+
+label {
+	font-family: "Inter";
+	font-size: 13;
+	color: #9ca3af;
+}
+
+p {
+	font-family: "Inter";
+	font-weight: 280;
+	font-size: 20;
+	color: #d5d4d8;
+	margin: 0.5rem;
+	margin-left: 0;
+}
+
+#p-pw-length {
+	font-family: "karla";
+	font-size: 20;
+	font-weight: 600;
+}
+
+/* Reference: W3
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_rangeslider
+ */
+
+.slider {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 250px;
+	height: 10px;
+	border-radius: 5px;
+	background: white;
+	outline: none;
+	opacity: 0.7;
+	-webkit-transition: 0.2s;
+	transition: opacity 0.2s;
+}
+
+.slider:hover {
+	opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	appearance: none;
+	width: 25px;
+	height: 25px;
+	background: #6d28d9;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.slider::-moz-range-thumb {
+	width: 25px;
+	height: 25px;
+	background: #6d28d9;
+	cursor: pointer;
+}
+
+#generate-pw-btn {
+	font-family: "Inter";
+	font-weight: 500;
+	font-size: 1rem;
+	color: white;
+	padding: 0.5em 1.5em;
+	border: none;
+	background-color: #6d28d9;
+	border-radius: 0.5em;
+	margin-left: 0;
+}
+
+#generate-pw-btn:hover {
+	background-color: #4c1d95;
+}
+
+#pw-one-btn {
+	height: 3.2em;
+	font-family: "Inter";
+	font-weight: 500;
+	font-size: 16;
+	color: white;
+	padding: 1em 3em;
+	border: none;
+	background-color: #273549;
+	border-radius: 0.5em;
+	margin: 0.5em 0;
+	width: 100%;
+	text-align: center;
+	padding: 1em 1em;
+}
+
+#pw-one-btn:hover {
+	background-color: #6e8ab1;
+}
+
+#pw-two-btn {
+	height: 3.2em;
+	font-family: "Inter";
+	font-weight: 500;
+	font-size: 16;
+	color: white;
+	padding: 1em 3em;
+	border: none;
+	background-color: #273549;
+	border-radius: 0.5em;
+	margin: 0.5em 0;
+	width: 100%;
+	text-align: center;
+	padding: 1rem 1rem;
+}
+
+#pw-two-btn:hover {
+	background-color: #6e8ab1;
+}
+
+#message {
+	font-family: "Inter";
+	font-weight: 500;
+	font-size: 12;
+	color: white;
+	padding: 1em 3em;
+	border: none;
+	border-radius: 0.5em;
+}
