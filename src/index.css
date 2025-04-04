@@ -1,31 +1,26 @@
-.karla {
-	font-family: "Karla", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 800;
-	font-style: normal;
-}
-
-.inter {
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-}
-
 body {
-	margins: 0;
+	margin: 0;
+	text-align: center;
 	background-color: #1c1c1c;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	align-items: center;
+}
+
+.outline {
+	margin: 50px;
 }
 
 #container {
-	width: 34.37rem;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+	padding: 50px;
+	min-height: 70vh;
+	width: 34.37rem;
 	background-color: #1f2937;
-	padding: 3em;
 	border-radius: 2em;
 }
 
