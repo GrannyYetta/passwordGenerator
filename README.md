@@ -1,4 +1,4 @@
-# Random Password Generator
+# Random Password Generator 🔒
 
 This project is deployed at this [link](https://beckaspwgenerator.netlify.app/).
 
