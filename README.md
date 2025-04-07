@@ -12,7 +12,7 @@ This is a tool for generating secure, random passwords and copy them to the clip
 - CSS
 - JavaScript
 
-##Features
+## Features
 
 - Customizable Password Length: Choose the desired length of the password.
 - Character Options: Include uppercase letters, lowercase letters, numbers, and special characters.
