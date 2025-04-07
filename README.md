@@ -1,6 +1,6 @@
 # Random Password Generator
 
-This project is deployed at this link[url](https://beckaspwgenerator.netlify.app/).
+This project is deployed at this [link](https://beckaspwgenerator.netlify.app/).
 
 ## Summary
 
@@ -31,17 +31,17 @@ Make sure you have the following installed:
 ### Installation
 
 1. Clone this repository to your local machine:
-    ```bash
-    git clone https://github.com/yourusername/meme-generator.git
-    ```
+   ```bash
+   git clone https://github.com/yourusername/meme-generator.git
+   ```
 2. Navigate into the project directory:
-    ```bash
-    cd meme-generator
-    ```
+   ```bash
+   cd meme-generator
+   ```
 3. Install the dependencies:
-    ```bash
-    npm install
-    ```
+   ```bash
+   npm install
+   ```
 
 ### Running the App
 
@@ -50,7 +50,6 @@ Start the development server:
 ```bash
 npm start
 ```
-
 
 # Contributing
 
