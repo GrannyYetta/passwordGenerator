@@ -4,7 +4,7 @@ This project is deployed at this [link](https://beckaspwgenerator.netlify.app/).
 
 ## Summary
 
-This project is part of the Solo Project section of the Basic JavaScript on Scrimba. This is a tool for generating secure, random passwords and copy them to the clipboard.
+This is a tool for generating secure, random passwords and copy them to the clipboard. This project is part of the Solo Project section of the Basic JavaScript on Scrimba.
 
 ## Tech Stack
 
