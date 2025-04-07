@@ -95,8 +95,14 @@ let lowercaseEl = document.getElementById("lowercase-el");
 let numbersEl = document.getElementById("numbers-el");
 let charactersEl = document.getElementById("characters-el");
 
+let clearBtn = document.getElementById("clear-btn");
+
 const value = document.querySelector("#pw-length-slider-value");
 const input = document.querySelector("#p-pw-length-slider");
+const output = document.getElementById("pw-length-slider-value");
+
+let generatePasswordOneEl = document.getElementById("pw-one-btn");
+let generatePasswordTwoEl = document.getElementById("pw-two-btn");
 
 const passwordGeneratorBtn = document
 	.getElementById("generate-pw-btn")
@@ -143,9 +149,6 @@ function randomIndex() {
 }
 
 function generatePasswords() {
-	let generatePasswordOneEl = document.getElementById("pw-one-btn");
-	let generatePasswordTwoEl = document.getElementById("pw-two-btn");
-
 	generatePasswordOneEl.textContent = "";
 	generatePasswordTwoEl.textContent = "";
 
@@ -191,3 +194,17 @@ async function copyPassword(event, feedbackDuration = 1000) {
 		console.error("Failed to copy", err);
 	}
 }
+
+function clearFields() {}
+
+clearBtn.addEventListener("click", function () {
+	generatePasswordOneEl.textContent = "";
+	generatePasswordTwoEl.textContent = "";
+	input.value = "";
+	input.textContent = "";
+	output.textContent = "";
+	uppercaseEl.checked = false;
+	lowercaseEl.checked = false;
+	numbersEl.checked = false;
+	charactersEl.checked = false;
+});
